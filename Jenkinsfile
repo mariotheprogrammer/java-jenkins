@@ -13,6 +13,10 @@ pipeline {
         sh 'mvn -B -DskipTests clean package'
       }
     }
-
+    stage('Cleanup') {
+      steps {
+        sh 'docker system prune -af --volumes'
+      }
+    }
   }
 }
