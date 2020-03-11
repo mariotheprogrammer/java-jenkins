@@ -9,8 +9,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo '${env.BUILD_NUMBER}'
-        sh 'mvn -B -DskipTests clean package'
+        sh 'ls -la /tmp'
+        sh 'mvn -q -B -DskipTests clean package'
       }
     }
 
