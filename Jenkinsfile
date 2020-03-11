@@ -14,12 +14,4 @@ pipeline {
       }
     }
   }
-  
-  stages {
-    stage('Cleanup') {
-      steps {
-        sh 'docker system prune -af --volumes'
-      }
-    }
-  }
 }
