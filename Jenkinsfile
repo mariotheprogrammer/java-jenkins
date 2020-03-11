@@ -2,9 +2,9 @@ pipeline {
   agent {
     dockerfile {
       filename 'Dockerfile'
+      echo '${env.BUILD_NUMBER}'
+      echo docker.image.id
     }
-    echo '${env.BUILD_NUMBER}'
-    echo docker.image.id
 
   }
   stages {
