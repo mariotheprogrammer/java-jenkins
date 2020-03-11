@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'ls -la /tmp'
-        sh 'mvn -q -B -DskipTests clean package'
+        sh 'mvn -B -DskipTests clean package'
       }
     }
 
