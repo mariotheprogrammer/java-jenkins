@@ -2,8 +2,7 @@ pipeline {
   agent {
     dockerfile {
       filename 'Dockerfile'
-      echo '${env.BUILD_NUMBER}'
-      echo docker.image.id
+      args '-v /tmp:/tmp'
     }
 
   }
